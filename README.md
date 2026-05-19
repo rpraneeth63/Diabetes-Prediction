@@ -1,91 +1,220 @@
-# 🩺 Diabetes Prediction using Machine Learning
+# Diabetes Prediction and Personalized Diet Recommendation System
 
-## 📘 Project Overview
-This project aims to predict whether a person is likely to have diabetes based on various medical attributes such as glucose level, blood pressure, BMI, age, and more.  
-By leveraging machine learning classification algorithms, this model helps in early detection and prevention of diabetes.
+## 📌 Project Overview
 
-## 📂 Dataset
-The dataset used is the **Pima Indians Diabetes Database**, publicly available from [Kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database).  
-It contains **768 records** and **8 independent variables**, along with one target column indicating diabetes presence (1) or absence (0).
+This project aims to predict whether a person is likely to have diabetes using machine learning classification algorithms based on medical attributes such as glucose level, blood pressure, BMI, insulin level, age, and other clinical parameters.
 
-| Feature | Description |
-|----------|-------------|
-| Pregnancies | Number of times pregnant |
-| Glucose | Plasma glucose concentration |
-| BloodPressure | Diastolic blood pressure (mm Hg) |
-| SkinThickness | Triceps skin fold thickness (mm) |
-| Insulin | 2-Hour serum insulin (mu U/ml) |
-| BMI | Body mass index (weight in kg/(height in m)^2) |
-| DiabetesPedigreeFunction | Diabetes pedigree function (genetic risk) |
-| Age | Age in years |
-| Outcome | 1 = Diabetic, 0 = Non-Diabetic |
+In addition to prediction, the system also provides personalized diet recommendations for diabetic patients using predefined nutritional guidance and glycemic index analysis.
 
-## 🧠 Algorithms and Models Used
-Several classification algorithms were tested to find the best-performing model:
-- Logistic Regression
-- Support Vector Machine (SVM)
-- Random Forest Classifier
-- K-Nearest Neighbors (KNN)
-- Decision Tree Classifier
+The project demonstrates an end-to-end machine learning workflow including:
 
-The final model was selected based on accuracy, precision, recall, and F1-score performance metric
+* Data preprocessing
+* Exploratory Data Analysis (EDA)
+* Model training and evaluation
+* Prediction generation
+* User interface integration
 
-## ⚙️ Technologies Used
-- **Python 3.x**
-- **NumPy** — numerical operations  
-- **Pandas** — data manipulation and cleaning  
-- **Matplotlib / Seaborn** — data visualization  
-- **Scikit-learn (sklearn)** — machine learning model training and evaluation  
-- **Jupyter Notebook / VS Code** — development environment  
+---
 
-## 🧩 Project Workflow
-1. **Data Preprocessing**
-   - Handling missing values
-   - Outlier detection
-   - Feature scaling (StandardScaler)
-2. **Exploratory Data Analysis (EDA)**
-   - Correlation matrix
-   - Feature importance visualization
-3. **Model Building**
-   - Splitting dataset into train/test sets
-   - Training multiple ML models
-4. **Model Evaluation**
-   - Using Accuracy, Precision, Recall, F1-Score, and Confusion Matrix
-5. **Model Deployment (Optional)**
-   - Streamlit/Flask web app integration for prediction interface
+# 📂 Dataset
 
-## 💻 Installation and Setup
+The project uses the **Pima Indians Diabetes Dataset**, publicly available on Kaggle.
 
-**1. Navigate into the project folder**
-cd Diabetes-Prediction
+### Dataset Information
 
-**2. Install required libraries**
-pip install -r requirements.txt
+* Total Records: 768
+* Features: 8 medical attributes
+* Target Variable:
 
+  * `1` → Diabetic
+  * `0` → Non-Diabetic
 
-(If you don’t have a requirements.txt, you can install manually:)
+| Feature                  | Description                  |
+| ------------------------ | ---------------------------- |
+| Pregnancies              | Number of times pregnant     |
+| Glucose                  | Plasma glucose concentration |
+| BloodPressure            | Diastolic blood pressure     |
+| SkinThickness            | Triceps skin fold thickness  |
+| Insulin                  | 2-Hour serum insulin         |
+| BMI                      | Body mass index              |
+| DiabetesPedigreeFunction | Genetic diabetes risk        |
+| Age                      | Age in years                 |
+| Outcome                  | Diabetes prediction result   |
 
+---
+
+# 🧠 Machine Learning Algorithms Used
+
+The following classification algorithms were implemented and compared:
+
+* Decision Tree Classifier
+* Support Vector Machine (SVM)
+* Artificial Neural Network (ANN)
+* Ensemble Classifier
+
+The models were evaluated using:
+
+* Accuracy Score
+* Precision
+* Recall
+* F1-Score
+
+---
+
+# ⚙️ Technologies Used
+
+## Programming Language
+
+* Python 3.x
+
+## Libraries and Frameworks
+
+* NumPy
+* Pandas
+* Scikit-learn
+* Matplotlib
+* Seaborn
+
+## Development Tools
+
+* Jupyter Notebook
+* VS Code
+
+---
+
+# 🧩 Project Workflow
+
+## 1️⃣ Data Preprocessing
+
+* Handling invalid values
+* Data cleaning
+* Feature scaling
+* Preparing dataset for training
+
+## 2️⃣ Exploratory Data Analysis (EDA)
+
+* Correlation analysis
+* Data visualization
+* Feature relationship analysis
+
+## 3️⃣ Model Training
+
+* Splitting dataset into training and testing sets
+* Training multiple machine learning models
+* Comparing model performances
+
+## 4️⃣ Prediction System
+
+* Predicting diabetes risk using trained models
+* Displaying prediction results through the interface
+
+## 5️⃣ Diet Recommendation Module
+
+* Providing personalized dietary suggestions
+* Using glycemic index information for meal planning
+
+---
+
+# 📸 Screenshots
+
+## Accuracy Comparison Graph
+
+Shows performance comparison between multiple machine learning models.
+
+![Accuracy Graph](screenshots/accuracy_graph.png)
+
+---
+
+## Prediction Interface
+
+The system predicts diabetes risk based on patient medical values and provides personalized recommendations.
+
+![Prediction Interface](screenshots/prediction_interface.png)
+
+---
+
+## Model Evaluation Output
+
+Displays accuracy results generated by different machine learning algorithms.
+
+![Model Evaluation](screenshots/model_evaluation.png)
+
+---
+
+## Diet Recommendation
+
+Example glycemic index chart used for nutritional guidance.
+
+![Diet Recommendation](screenshots/diet_recommendation.png)
+
+---
+
+# 📊 Results
+
+| Model               | Accuracy |
+| ------------------- | -------- |
+| Decision Tree       | 71%      |
+| SVM                 | 84%      |
+| ANN                 | 72%      |
+| Ensemble Classifier | 87%      |
+
+The Ensemble Classifier achieved the best overall performance among all implemented models.
+
+---
+
+# 🚀 Future Improvements
+
+* Build a modern web application using Streamlit
+* Improve prediction accuracy using advanced ensemble techniques
+* Integrate real-time health monitoring data
+* Deploy the project as a cloud-based healthcare application
+* Add patient report generation and analytics dashboard
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project, I learned:
+
+* Machine learning classification workflows
+* Data preprocessing techniques
+* Model evaluation methods
+* Healthcare data analysis
+* Building AI-based prediction systems
+* Visualization and result interpretation
+
+---
+
+# ▶️ How to Run the Project
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone <your-repository-link>
+```
+
+## 2️⃣ Install Required Libraries
+
+```bash
 pip install numpy pandas matplotlib seaborn scikit-learn
+```
 
-**3. Run the Jupyter Notebook or Python script**
-jupyter notebook Diabetes_Prediction.ipynb
-or
+## 3️⃣ Run the Project
+
+```bash
 python diabetes_prediction.py
+```
 
-## 📊 Results
-Model	Accuracy	F1-Score
-Logistic Regression	78%	0.76
-Random Forest	82%	0.80
-SVM	79%	0.77
+or open the notebook using:
 
-The Random Forest Classifier achieved the best results with an overall accuracy of ~82%.
+```bash
+jupyter notebook
+```
 
-## 🚀 Future Scope
+---
 
-Integrate the model into a web application using Streamlit or Flask
+# 👨‍💻 Author
 
-Improve performance using hyperparameter tuning or deep learning models
-
-Expand dataset to include more demographic features
-
-Deploy as an API or mobile app for clinical use
+**Ravi Praneeth**
+B.Tech CSE — VIT Vellore
+Interested in Artificial Intelligence, NLP, and Healthcare AI Applications.
